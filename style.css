@@ -249,10 +249,15 @@
 }
 
 .package_card_content{
-    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 10px auto;
     background-color: var(--color-secondary);
     color: var(--color-text);
     text-align: center;
-    display: flex;
-    flex-direction: column;
+}
+
+.package_card_content p{
+    font-size: 14px;
 }
