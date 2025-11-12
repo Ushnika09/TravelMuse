@@ -1,6 +1,6 @@
 :root {
   /* 🎨 Brand Colors */
-  --color-primary: #8b5cf6; /* Violet accent */
+  --color-primary: rgb(139, 92, 246); /* Violet accent */
   --color-secondary: #a78bfa; /* Lighter violet hover */
 
   /* 🌌 Backgrounds */
@@ -9,7 +9,7 @@
 
   /* 🖋️ Text Colors */
   --color-text: #f8fafc; /* Bright main text */
-  --color-text-muted: #94a3b8; /* Subtle gray-blue secondary text */
+  --color-text-muted: rgb(148, 163, 184); /* Subtle gray-blue secondary text */
 
   /* 🪄 Borders & Shadows */
   --color-border: #334155; /* Soft border */
@@ -26,17 +26,30 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+body{
+    position: relative;
+    transition: var(--transition);
+}
 
 /* header styles */
-.container{
+header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    z-index: 1000;
+}
+
+.container{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
     background: var(--color-surface);
     display: flex;
     flex-direction: row;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
     box-shadow: var(--shadow);
@@ -57,7 +70,10 @@
     color: var(--color-text);
     font-size: 18px;
     font-weight: 500;
-    transition: var(--transition);   
+    transition: var(--transition);  
+    flex-wrap: nowrap; 
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .nav-links a:hover{
@@ -65,7 +81,7 @@
 }
 
 .logo{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--color-primary);
     text-decoration: none;
@@ -144,7 +160,7 @@
 
 /* Destination section */
 .destination_section {
-    padding: 50px;
+    padding: 100px 50px;
     
     color: var(--color-border);
 
@@ -198,7 +214,7 @@
 
 /* package section styles */
 .package_section{
-    padding: 50px;
+    padding:  100px 50px;
     width: 100%;
     color: var(--color-border);
 }
@@ -296,7 +312,7 @@
 /* Testimonials section styles */
 
 .testimonial_section{
-    padding: 50px;
+    padding: 100px 50px;
     width: 100%;
     color: var(--color-border);
 }
@@ -347,3 +363,246 @@
     text-align: right;
 }
 
+/* Book Now section styles */
+.booknow_section{
+    padding:  100px 50px;
+    width: 100%;
+    text-align: center;
+    color: var(--color-border);
+}
+.booknow_section h2{
+    color: var(--color-primary);
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.booknow_section p{
+    font-size: 18px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px auto;
+}
+.booking{
+    display: flex;
+    padding: 25px;
+    width: 450px;
+    margin: auto;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgba(139, 92, 246, 0.7);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+.booking label{
+    font-size: 16px;
+    color: var(--color-text);
+    align-self: flex-start;
+}
+
+.booking input,
+.booking textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--color-bg);
+}
+
+.dropdown{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    appearance: none;
+    background:white url(dropdown.png) no-repeat right 15px center;
+    background-size: 10px 10px;
+}
+
+options{
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+}
+
+
+.booking button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.booking button:hover{
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+}
+
+
+/* footer styles */
+footer{
+    padding: 50px;
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow);
+    color: var(--color-text);
+    width: 100%;
+}
+
+.footer_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.footer_top{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    /* z-index: 1000; */
+}
+
+.about_us p{
+    max-width: 300px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+iframe{
+    height: 150px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-top: 20px;
+}
+
+.contact_info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 300px;
+}
+.contact_info h3{
+    margin-bottom: 5px;
+}
+
+.social_links{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social_links a{
+    color: var(--color-text);
+    font-size: 20px;
+    transition: var(--transition);
+}
+
+hr{
+    border: 0;
+    height: 0.5px;
+    width: 80%;
+    background-color: rgba(148, 163, 184, 0.7);
+    margin: 20px 0;
+}
+
+.copyright{
+    text-align: center;
+    font-size: 18px;
+    color: rgba(148, 163, 184, 0.9);
+}
+
+.hamburger{
+    display: none;
+    font-size: 24px;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px){
+    .container{
+        padding: 20px 30px;
+    }
+    .nav-links{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hero_content h1{
+        font-size: 32px;
+    }
+    .hero_content p{
+        font-size: 16px;
+        max-width: 90%;
+    }
+    .destinations_container,
+    .packages_container,
+    .testimonials_container{
+        grid-template-columns: 1fr;
+    }
+    .booking{
+        width: 100%;
+    }
+    
+
+}
+
+
+@media (max-width:1024px) {
+    .container{
+        padding: 20px 40px;
+    }
+    .nav-links{
+        gap: 1.5rem;
+    }
+    .nav-links a{
+        font-size: 16px;
+    }
+    .logo{
+        font-size: 16px;
+    }
+    .footer_top{
+        flex-direction: column;
+        align-items: center;
+        font-size: 15px;
+        gap: 15px;
+    }
+    .about_us p,
+    .contact_info{
+        text-align: center;
+        max-width: 100%;
+    }
+    .about_us h2,.contact_info h3{
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .social_links {
+        justify-content: center;
+    }
+    iframe{
+        width: 100%;
+        height: 200px;
+    }
+}
