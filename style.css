@@ -161,7 +161,6 @@ header{
 /* Destination section */
 .destination_section {
     padding: 100px 50px;
-    
     color: var(--color-border);
 
 }
@@ -563,6 +562,11 @@ hr{
     }
     .booking{
         width: 100%;
+    }
+
+    .hero_container,.destination_section,
+    .package_section,.testimonial_section,.booknow_section{
+        padding: 50px;
     }
     
 
